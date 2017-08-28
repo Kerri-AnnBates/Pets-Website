@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -32,18 +34,26 @@ img {
 
 p {
   line-height: 1.6;
+  font-size: 1.2em;
 }
 
 .wrapper {
   width: 95%;
   margin: 0 auto;
 }
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /**************************
 *HEADER
 **************************/
 
 .main-header {
-  font-size: 5em; /* 80px */
+  font-size: 5em; /* 80px/16px */
 }
 
 /******* Navigation ********/
@@ -90,30 +100,32 @@ nav {
 }
 
 .banner h2 {
-    font-size: 2.2em;
+    font-size: 2.25em; /* 36px/16px */
 }
 
 .tagline {
+  font-size: 1.125em; /* 18px/16px */
   margin: 8px auto;
 }
 
 /**************************
 *MAIN
 **************************/
-main {
-  width: 95%;
-  margin: 0 auto;
-}
-
 .section-heading {
   text-align: left;
   margin: 18px 0 5px;
+  font-size: 2.5em;
 }
 
-main p {
-  margin: 5px;
+.primary,
+.secondary {
+  margin-top: 2.4em;
 }
 
+main img {
+  border-radius: 1%;
+  /*height: 500px;*/
+}
 /**************************
 *FOOTER
 **************************/
@@ -129,9 +141,7 @@ footer {
 **************************/
 @media screen and (min-width: 760px) {
 
-
   /******* Header/Navigation ********/
-
   header {
     display: flex;
     flex-direction: column;
@@ -139,8 +149,8 @@ footer {
   }
 
   .main-header {
-      width: 100%;
-      background-color: #52BABF;
+    width: 100%;
+    background-color: #52BABF;
   }
 
   nav {
@@ -157,11 +167,36 @@ footer {
 
   .main-navigation li {
     border-bottom: none;
+    margin: 0 40px;
   }
 
   /******* Banner ********/
   .banner {
-    height: 500px;
+    height: 530px;
+  }
+
+  #intro {
+    margin-top: 10%;
+  }
+
+  .banner h2 {
+    font-size: 3em; /* 48px/16px */
+  }
+
+  .tagline {
+    font-size: 1.5em; /* 24px/16px */
+  }
+
+  /******* Main ********/
+  .main-content img {
+    display: inline-block;
+    max-width: 50%;
+    margin-left: 3%;
+    float: right;
+  }
+
+  .section-heading {
+    font-size: 2em;
   }
 }
 
@@ -186,6 +221,14 @@ footer {
 
   a {
     color: #FFF;
+  }
+
+  .main-navigation li {
+    margin: 0 20px;
+  }
+
+  .banner {
+    height: 600px;
   }
 
 }
