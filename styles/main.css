@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Quicksand', 'Open Sans', sans-serif;
-  color: #333;
+  color: #5E5E5E;
 }
 
 h1,
@@ -54,6 +54,7 @@ p {
 
 .main-header {
   font-size: 5em; /* 80px/16px */
+  color: #333;
 }
 
 /******* Navigation ********/
@@ -115,16 +116,44 @@ nav {
   text-align: left;
   margin: 18px 0 5px;
   font-size: 2.5em;
+  color: #66717E;
 }
 
 .primary,
-.secondary {
+.secondary,
+.photo-shuffle {
   margin-top: 2.4em;
 }
 
 main img {
-  border-radius: 1%;
+  border-radius: 3%;
   /*height: 500px;*/
+}
+
+/****** photo shuffle ******/
+.card img {
+  border-radius: 0;
+}
+
+.photo-shuffle {
+  border-top: 1px solid #C0603F;
+  padding-top: 80px;
+}
+
+h3 {
+  font-size: 3em;
+  font-weight: 300;
+  text-align: center;
+  vertical-align: middle;
+  padding: 15% 0;
+}
+
+.card h3 {
+  background: #C0603F;
+}
+
+.card img, .card h3 {
+  height: 400px;
 }
 /**************************
 *FOOTER
@@ -198,9 +227,24 @@ footer {
   .section-heading {
     font-size: 2em;
   }
+
+  /****** photo shuffle ******/
+  .card :first-child {
+    float: left;
+    width: 50%;
+  }
+  .card :last-child {
+    float: left;
+    width: 50%;
+    border-radius: 0;
+  }
 }
 
 @media screen and (min-width: 1025px) {
+
+  .wrapper {
+    width: 75%;
+  }
 
   /******* Header/Navigation ********/
   header {
@@ -229,6 +273,15 @@ footer {
 
   .banner {
     height: 600px;
+  }
+
+  /******* Main ********/
+  .section-heading {
+    font-size: 3em;
+  }
+
+  .main-content img {
+    max-width: 40%;
   }
 
 }
